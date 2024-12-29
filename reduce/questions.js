@@ -70,7 +70,6 @@ const flattenArray = function (arrays) { };
 // uniqueNumbers([1, 2, 2, 3, 4, 4, 5]) => [1, 2, 3, 4, 5]
 const uniqueNumbers = function (numbers) { };
 
-// ****************************************************************************
 // groupByLength(["apple", "banana", "cherry", "date"]) => { 5: ["apple", "cherry"], 6: ["banana"], 4: ["date"] }
 const groupByLength = function (strings) { };
 
@@ -85,6 +84,7 @@ const zip = function (keys, values) { };
 
 // makeObject(["city", "country"], ["Paris", "France"]) => { "city": "Paris", "country": "France" }
 const makeObject = function (keys, values) { };
+// ****************************************************************************
 
 // invertObject({ "a": 1, "b": 2, "c": 3 }) => { 1: "a", 2: "b", 3: "c" }
 const invertObject = function (obj) { };
