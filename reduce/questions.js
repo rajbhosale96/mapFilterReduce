@@ -90,7 +90,6 @@ const invertObject = function (obj) {};
 
 // mergeArrays([["a", 1], ["b", 2]], [["c", 3], ["d", 4]]) => { "a": 1, "b": 2, "c": 3, "d": 4 }
 const mergeArrays = function (arr1, arr2) {};
-// ****************************************************************************
 
 // groupByProperty([{name: "John", age: 25}, {name: "Jane", age: 30}]) => { 25: [{name: "John", age: 25}], 30: [{name: "Jane", age: 30}] }
 const groupByProperty = function (objects) {};
@@ -103,12 +102,13 @@ const flattenToObject = function (pairs) {};
 
 // longestString(["apple", "banana", "cherry", "dates"]) => "banana"
 const longestString = function (strings) {};
+// ****************************************************************************
+
+// sumAndCount([1, 2, 3, 4]) => { sum: 10, count: 4 }
+const sumAndCount = function (numbers) { };
 
 // mergeIntervals([[1,3], [2,4], [5,7]]) => [[1, 4], [5, 7]]
 const mergeIntervals = function (intervals) {};
-
-// sumAndCount([1, 2, 3, 4]) => { sum: 10, count: 4 }
-const sumAndCount = function (numbers) {};
 
 // deepFlatten([[1,2], [3,4, [5,6]], 7]) => [1,2,3,4,5,6,7]
 const deepFlatten = function (arr) {};
