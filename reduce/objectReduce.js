@@ -1,18 +1,19 @@
 // groupByLength(["apple", "banana", "cherry", "date"]) => { 5: ["apple", "cherry"], 6: ["banana"], 4: ["date"] }
 
-const addToGroups = (group, string) => {
-  const length = string.length;
-
-  if (!group[length]) {
-    group[length] = [];
+const addToGroups = (group, string, key) => {
+  if (!group[key]) {
+    group[key] = [];
   }
 
-  group[length].push(string);
+  group[key].push(string);
   return group;
 };
 
 const groupByLength = (strings) => {
-  return strings.reduce((group, string) => addToGroups(group, string), {});
+  return strings.reduce(
+    (group, string) => addToGroups(group, string, string.length),
+    {}
+  );
 };
 
 // countOccurrences(["apple", "banana", "cherry", "banana"]) => { apple: 1, banana: 2, cherry: 1 }
@@ -55,4 +56,33 @@ const invertObject = (obj) => {
   const values = Object.values(obj);
 
   return zip(values, keys);
+};
+
+// mergeArrays([["a", 1], ["b", 2]], [["c", 3], ["d", 4]]) => { "a": 1, "b": 2, "c": 3, "d": 4 }
+const mergeArrays = function (arr1, arr2) {
+  return [...arr1, ...arr2].reduce((object, [key, value]) => {
+    object[key] = value;
+    return object;
+  }, {});
+};
+
+// groupByProperty([{name: "John", age: 25}, {name: "Jane", age: 30}]) => { 25: [{name: "John", age: 25}], 30: [{name: "Jane", age: 30}] }
+// const groupByProperty = function (objects) {
+//   return objects.reduce((grouped, object) => {
+//     const key = object["age"];
+
+//     if (!grouped[key]) {
+//       grouped[key] = [];
+//     }
+
+//     grouped[key].push(object);
+//     return grouped;
+//   }, {});
+// };
+
+const groupByProperty = function (objects) {
+  return objects.reduce(
+    (group, object) => addToGroups(group, object, object["age"]),
+    {}
+  );
 };
