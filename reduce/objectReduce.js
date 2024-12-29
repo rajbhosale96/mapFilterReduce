@@ -67,19 +67,6 @@ const mergeArrays = function (arr1, arr2) {
 };
 
 // groupByProperty([{name: "John", age: 25}, {name: "Jane", age: 30}]) => { 25: [{name: "John", age: 25}], 30: [{name: "Jane", age: 30}] }
-// const groupByProperty = function (objects) {
-//   return objects.reduce((grouped, object) => {
-//     const key = object["age"];
-
-//     if (!grouped[key]) {
-//       grouped[key] = [];
-//     }
-
-//     grouped[key].push(object);
-//     return grouped;
-//   }, {});
-// };
-
 const groupByProperty = function (objects) {
   return objects.reduce(
     (group, object) => addToGroups(group, object, object["age"]),
